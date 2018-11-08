@@ -27,6 +27,12 @@
           <slot name="dot" :value="val[0]" :index="0" :disabled="disabledArray[0]">
             <div 
               class="vue-slider-dot-handle"
+              role="slider"
+              aria-orientation="horizontal"
+              aria-valuemin=minimum
+              aria-valuemax=maximum
+              aria-valuenow=val[0]
+              aria-valuetext=val[0]
               :style="[
                 (!boolDisabled && disabledArray[0])
                 ? disabledDotStyles[0]
