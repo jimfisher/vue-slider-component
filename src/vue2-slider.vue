@@ -10,10 +10,10 @@
       ref="elem"
       role="slider"
       aria-orientation="horizontal"
-      aria-valuemin=minimum
-      aria-valuemax=maximum
-      aria-valuenow=val[0]
-      aria-valuetext=val[0]
+      aria-valuemin=this.props.min
+      aria-valuemax=this.props.max
+      aria-valuenow=this.props.value
+      aria-valuetext=this.props.value
       class="vue-slider"
       :style="[elemStyles, bgStyle]">
       <template v-if="isRange"
