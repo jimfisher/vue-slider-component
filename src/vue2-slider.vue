@@ -9,11 +9,12 @@
     <div
       ref="elem"
       role="slider"
-      aria-orientation="horizontal"
-      aria-valuemin=this.props.min
-      aria-valuemax=this.props.max
-      aria-valuenow=this.props.value
-      aria-valuetext=this.props.value
+      :aria-orientation="horizontal"
+      :aria-valuemin=this.props.min
+      :aria-valuemax=this.props.max
+      :aria-valuenow=this.props.value
+      :aria-valuetext=this.props.value
+      tabindex="0"
       class="vue-slider"
       :style="[elemStyles, bgStyle]">
       <template v-if="isRange"
