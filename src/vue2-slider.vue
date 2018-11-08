@@ -37,8 +37,8 @@
               :aria-valuemax=maximum
               :aria-valuenow=val
               :aria-valuetext=val
-              @focus="[keydownFlag=true]"
               tabindex="0"
+              @focus="[focusSlider=true]"
               :style="[
                 (!boolDisabled && disabledArray[0])
                 ? disabledDotStyles[0]
@@ -114,8 +114,8 @@
               :aria-valuemax=maximum
               :aria-valuenow=val
               :aria-valuetext=val
-              @focus="[keydownFlag=true]"
               tabindex="0"
+              @focus="[focusSlider=true]"
               :style="[
                 sliderStyles,
                 focusFlag && focusSlider === 0 ? focusStyles : null
