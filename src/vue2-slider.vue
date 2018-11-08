@@ -6,8 +6,18 @@
     :style="[wrapStyles, boolDisabled ? disabledStyle : null]"
     @click="wrapClick"
   >
-    <div ref="elem" aria-hidden="true" class="vue-slider" :style="[elemStyles, bgStyle]">
-      <template v-if="isRange">
+    <div
+      ref="elem"
+      role="slider"
+      aria-orientation="horizontal"
+      aria-valuemin=minimum
+      aria-valuemax=maximum
+      aria-valuenow=val[0]
+      aria-valuetext=val[0]
+      class="vue-slider"
+      :style="[elemStyles, bgStyle]">
+      <template v-if="isRange"
+    >
         <div
           ref="dot0"
           key="dot0"
@@ -27,12 +37,6 @@
           <slot name="dot" :value="val[0]" :index="0" :disabled="disabledArray[0]">
             <div 
               class="vue-slider-dot-handle"
-              role="slider"
-              aria-orientation="horizontal"
-              aria-valuemin=minimum
-              aria-valuemax=maximum
-              aria-valuenow=val[0]
-              aria-valuetext=val[0]
               :style="[
                 (!boolDisabled && disabledArray[0])
                 ? disabledDotStyles[0]
