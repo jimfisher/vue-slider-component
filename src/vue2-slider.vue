@@ -37,7 +37,7 @@
               :aria-valuemax=maximum
               :aria-valuenow=val
               :aria-valuetext=val
-              @keydown=handleKeydown
+              @focus="[keydownFlag=true]"
               tabindex="0"
               :style="[
                 (!boolDisabled && disabledArray[0])
@@ -114,7 +114,7 @@
               :aria-valuemax=maximum
               :aria-valuenow=val
               :aria-valuetext=val
-              @keydown=handleKeydown
+              @focus="[keydownFlag=true]"
               tabindex="0"
               :style="[
                 sliderStyles,
