@@ -15,6 +15,13 @@
         <div
           ref="dot0"
           key="dot0"
+          role="slider"
+          :aria-orientation="horizontal"
+          :aria-valuemin=minimum
+          :aria-valuemax=maximum
+          :aria-valuenow=val[0]
+          :aria-valuetext=val[0]
+          tabindex="0"
           :class="[
             tooltipStatus,
             'vue-slider-dot',
@@ -32,14 +39,6 @@
             <div 
               ref="dotHandle0"
               class="vue-slider-dot-handle"
-              role="slider"
-              :aria-orientation="horizontal"
-              :aria-valuemin=minimum
-              :aria-valuemax=maximum
-              :aria-valuenow=val[0]
-              :aria-valuetext=val[0]
-              tabindex="0"
-              @focus="[this.$refs.dotHandle0.click()]"
               :style="[
                 (!boolDisabled && disabledArray[0])
                 ? disabledDotStyles[0]
@@ -94,6 +93,13 @@
         <div
           ref="dot"
           key="dot"
+          role="slider"
+          :aria-orientation="horizontal"
+          :aria-valuemin=minimum
+          :aria-valuemax=maximum
+          :aria-valuenow=val
+          :aria-valuetext=val
+          tabindex="0"
           :class="[
             tooltipStatus,
             'vue-slider-dot',
