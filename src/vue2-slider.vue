@@ -30,15 +30,16 @@
         >
           <slot name="dot" :value="val[0]" :index="0" :disabled="disabledArray[0]">
             <div 
+              ref="dotHandle0"
               class="vue-slider-dot-handle"
               role="slider"
               :aria-orientation="horizontal"
               :aria-valuemin=minimum
               :aria-valuemax=maximum
-              :aria-valuenow=val
-              :aria-valuetext=val
+              :aria-valuenow=val[0]
+              :aria-valuetext=val[0]
               tabindex="0"
-              @focus="[focusSlider=true]"
+              @focus="[this.$refs.dotHandle0.click()]"
               :style="[
                 (!boolDisabled && disabledArray[0])
                 ? disabledDotStyles[0]
@@ -115,7 +116,6 @@
               :aria-valuenow=val
               :aria-valuetext=val
               tabindex="0"
-              @focus="[focusSlider=true]"
               :style="[
                 sliderStyles,
                 focusFlag && focusSlider === 0 ? focusStyles : null
