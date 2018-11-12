@@ -5,7 +5,6 @@
     v-show="show"
     :style="[wrapStyles, boolDisabled ? disabledStyle : null]"
     @click="wrapClick"
-    @keypress="moveStart($event, 0, true)"
   >
     <div
       ref="elem"
@@ -168,6 +167,7 @@
         :class="['vue-slider-process', { 'vue-slider-process-dragable': isRange && processDragable }]"
         :style="processStyle"
         @click="processClick"
+        @keypress="moveStart($event, 0, true)"
         @mousedown="moveStart($event, 0, true)"
         @touchstart="moveStart($event, 0, true)"
       >
