@@ -5,7 +5,6 @@
     v-show="show"
     :style="[wrapStyles, boolDisabled ? disabledStyle : null]"
     @click="wrapClick"
-    @keypress="[moveStart($event, currentIndex , false),moveEnd($event)]"
   >
     <div
       ref="elem"
@@ -102,6 +101,7 @@
             }
           ]"
           :style="dotStyles"
+          @keypress="[moveStart($event, currentIndex , false),moveEnd($event)]"
           @mousedown="moveStart"
           @touchstart="moveStart"
         >
