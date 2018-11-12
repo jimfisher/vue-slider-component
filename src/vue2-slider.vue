@@ -5,7 +5,7 @@
     v-show="show"
     :style="[wrapStyles, boolDisabled ? disabledStyle : null]"
     @click="wrapClick"
-    @keypress="moveStart($event, currentIndex , false)"
+    @keypress="[wrapClick, moveStart($event, currentIndex , false)]"
   >
     <div
       ref="elem"
