@@ -102,7 +102,7 @@
             }
           ]"
           :style="dotStyles"
-          @keypress="moveStart($event,0)"
+          @keypress="moveStart"
           @mousedown="moveStart"
           @touchstart="moveStart"
         >
@@ -169,6 +169,7 @@
         :class="['vue-slider-process', { 'vue-slider-process-dragable': isRange && processDragable }]"
         :style="processStyle"
         @click="processClick"
+        @keypress="moveStart($event,0)"
         @mousedown="moveStart($event, 0, true)"
         @touchstart="moveStart($event, 0, true)"
       >
