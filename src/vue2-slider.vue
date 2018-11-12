@@ -5,6 +5,7 @@
     v-show="show"
     :style="[wrapStyles, boolDisabled ? disabledStyle : null]"
     @click="wrapClick"
+    @keypress="wrapClick"
   >
     <div
       ref="elem"
@@ -25,7 +26,6 @@
             }
           ]"
           :style="dotStyles"
-          @keypress="moveStart($event,0)"
           @mousedown="moveStart($event, 0)"
           @touchstart="moveStart($event, 0)"
         >
@@ -102,7 +102,6 @@
             }
           ]"
           :style="dotStyles"
-          @keypress="moveStart"
           @mousedown="moveStart"
           @touchstart="moveStart"
         >
@@ -169,7 +168,7 @@
         :class="['vue-slider-process', { 'vue-slider-process-dragable': isRange && processDragable }]"
         :style="processStyle"
         @click="processClick"
-        @keypress="moveStart($event,0)"
+        @keypress="processClick"
         @mousedown="moveStart($event, 0, true)"
         @touchstart="moveStart($event, 0, true)"
       >
