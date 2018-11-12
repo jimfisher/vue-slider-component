@@ -101,7 +101,7 @@
             }
           ]"
           :style="dotStyles"
-          @keypress="[moveStart($event, currentIndex , false),moveEnd($event)]"
+          @keypress="moveStart"
           @mousedown="moveStart"
           @touchstart="moveStart"
         >
