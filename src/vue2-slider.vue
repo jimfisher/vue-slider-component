@@ -167,7 +167,7 @@
         :class="['vue-slider-process', { 'vue-slider-process-dragable': isRange && processDragable }]"
         :style="processStyle"
         @click="processClick"
-        @keypress="moveStart($event, 0, true)"
+        @keypress="moveStart($event, 0, false)"
         @mousedown="moveStart($event, 0, true)"
         @touchstart="moveStart($event, 0, true)"
       >
